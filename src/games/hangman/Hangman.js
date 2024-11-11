@@ -13,29 +13,35 @@ function Hangman() {
     const [correctGuesses, setCorrectGuesses] = useState([])
     const [incorrectGuesses, setIncorrectGuesses] = useState(0)
     const [selectedKeys, setSelectedKeys] = useState([])
+    const words = ['school', 'monkey', 'bottle', 'weather', 'flower']
+    const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
+    const maxGuesses = 6;
+
     const handleKeyClick = (keyvalue) => {
         if (!selectedKeys.includes(keyvalue)) {
             setSelectedKeys([...selectedKeys, keyvalue])
-            guessCheck(keyvalue) // calling guessCheck to validate the guess
+            guessCheck(keyvalue)
         }
     }
-
-    const words = ['school', 'monkey', 'bottle', 'weather', 'flower']
-    const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
-
-    const maxGuesses = 6;
-
 
     const guessCheck = (keyvalue) => {
         if (randomWord.includes(keyvalue)) {
             setCorrectGuesses([...correctGuesses, keyvalue])
         } else {
-            // if incorrect, trigger visual feedback and Hangman drawing
-            // track incorrect guesses
             setIncorrectGuesses(incorrectGuesses + 1)
+
+            if (incorrectGuesses + 1 >= maxGuesses) {
+                console.log('Game over! The correct word was:', randomWord)
+            }
         }
     }
 
+    const startNewGame = () => {
+        setRandomWord(words[Math.floor(Math.random() * words.length)])
+        setCorrectGuesses([])
+        setIncorrectGuesses(0)
+        setSelectedKeys([])
+    }
 
 
     return (
@@ -51,6 +57,10 @@ function Hangman() {
                         {correctGuesses.includes(letter) ? letter : '_'}
                     </span>
                 ))}
+            </div>
+
+            <div>
+                <button onClick={startNewGame}>New Game</button>
             </div>
 
             <div>
