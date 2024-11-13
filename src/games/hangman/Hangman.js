@@ -48,12 +48,16 @@ function Hangman() {
     return (
         <div>
 
+            <div className='resetGameBtn'>
+                <button onClick={startNewGame}>Restart Game</button>
+            </div>
+
             <div className='hangman-drawing'>
                 <img src={hangmanImg[incorrectGuesses]} alt={`Hangman guess ${incorrectGuesses}`} />
             </div>
 
             <div className='word-display'>
-                {randomWord.split('').map((letter, index) => (
+                {randomWord.split('').map((letter, index,) => (
                     <span key={index} className='letter'>
                         {correctGuesses.includes(letter) ? letter : '_'}
                     </span>
@@ -61,14 +65,8 @@ function Hangman() {
             </div>
 
             <div>
-                <button onClick={startNewGame}>New Game</button>
-            </div>
-
-            <div>
-                <h1>Keyboard</h1>
-
                 <div className="keyboard">
-                    {['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'].map((keyvalue) => (
+                    {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
                         <div
                             key={keyvalue}
                             className={`key ${selectedKeys.includes(keyvalue) ? 'selected' : ''}`}
