@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './Hangman.css'
 import hangman0 from './hangmanImg/hangman-0.svg'
 import hangman1 from './hangmanImg/hangman-1.svg'
 import hangman2 from './hangmanImg/hangman-2.svg'
