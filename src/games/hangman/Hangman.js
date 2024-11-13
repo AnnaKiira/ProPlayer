@@ -49,7 +49,7 @@ function Hangman() {
         <div>
 
             <div className='resetGameBtn'>
-                <button onClick={startNewGame}>Restart Game</button>
+                <button onClick={startNewGame}>Restart Hangman</button>
             </div>
 
             <div className='hangman-drawing'>
