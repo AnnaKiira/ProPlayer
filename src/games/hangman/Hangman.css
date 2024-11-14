@@ -1,10 +1,23 @@
+.hangmanGame h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #F26BC3;
+}
+
+.hangmanContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .keyboard {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 450px 0 450px;
+    margin: 150px 450px 0 450px;
 }
 
 .key {
@@ -17,14 +30,12 @@
     font-size: 50px;
     height: 38px;
     width: 38px;
-    background:#ebebeb;
+    background:#9BC1F2;
     border-radius: 15px;
     box-shadow: 5px 10px #6a89a7;
 }
 
 .key:hover {
-    background-color: #6a89a7;
-    box-shadow: 5px 10px #ebebeb;
     animation: bubble 0.4s ease-out;
 }
   
@@ -46,11 +57,11 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
+    margin-top: 140px;
 }
 
 .letter {
     padding: 16px;
-    margin: 0 0 16px 0;
     font-size: 50px;
 }
 

@@ -10,7 +10,7 @@ function App() {
   return (
     <div className='gamescontainer'>
 
-      <h1>Games</h1>
+      <h1>ProPlayer</h1>
 
       {!selectedGame && (
         <div className='gamesBtn'>

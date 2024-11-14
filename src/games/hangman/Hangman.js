@@ -46,36 +46,40 @@ function Hangman() {
 
 
     return (
-        <div>
+        <div className='hangmanGame'>
+
+            <h1>HANGMAN</h1>
 
             <div className='resetGameBtn'>
                 <button onClick={startNewGame}>Restart Hangman</button>
             </div>
 
-            <div className='hangman-drawing'>
-                <img src={hangmanImg[incorrectGuesses]} alt={`Hangman guess ${incorrectGuesses}`} />
-            </div>
+            <div className='hangmanContainer'>
 
-            <div className='word-display'>
-                {randomWord.split('').map((letter, index,) => (
-                    <span key={index} className='letter'>
-                        {correctGuesses.includes(letter) ? letter : '_'}
-                    </span>
-                ))}
-            </div>
+                <div className='hangman-drawing'>
+                    <img src={hangmanImg[incorrectGuesses]} alt={`Hangman guess ${incorrectGuesses}`} />
+                </div>
 
-            <div>
-                <div className="keyboard">
-                    {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
-                        <div
-                            key={keyvalue}
-                            className={`key ${selectedKeys.includes(keyvalue) ? 'selected' : ''}`}
-                            onClick={() => handleKeyClick(keyvalue)}
-                        >
-                            {keyvalue.toUpperCase()}
-                        </div>
+                <div className='word-display'>
+                    {randomWord.split('').map((letter, index,) => (
+                        <span key={index} className='letter'>
+                            {correctGuesses.includes(letter) ? letter : '_'}
+                        </span>
                     ))}
                 </div>
+
+            </div>
+
+            <div className="keyboard">
+                {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
+                    <div
+                        key={keyvalue}
+                        className={`key ${selectedKeys.includes(keyvalue) ? 'selected' : ''}`}
+                        onClick={() => handleKeyClick(keyvalue)}
+                    >
+                        {keyvalue.toUpperCase()}
+                    </div>
+                ))}
             </div>
 
         </div>
