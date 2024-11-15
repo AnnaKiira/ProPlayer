@@ -48,11 +48,13 @@ function Hangman() {
     return (
         <div className='hangmanGame'>
 
-            <h1>HANGMAN</h1>
-
-            <div className='resetGameBtn'>
-                <button onClick={startNewGame}>Restart Hangman</button>
+            <div className='actionBtn'>
+                <button className='resetGameBtn' onClick={startNewGame}>Restart Game</button>
             </div>
+
+            
+            <h1>HANGMAN</h1>
+            
 
             <div className='hangmanContainer'>
 

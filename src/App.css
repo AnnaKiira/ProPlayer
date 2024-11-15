@@ -1,5 +1,6 @@
 .gamescontainer h1 {
-  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
   font-size: 30px;
 }
 

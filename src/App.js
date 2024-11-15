@@ -12,6 +12,12 @@ function App() {
 
       <h1>ProPlayer</h1>
 
+      {selectedGame && (
+        <div className='actionBtn'>
+          <button className='backBtn' onClick={() => setSelectedGame(null)}>Back</button>
+        </div>
+      )}
+
       {!selectedGame && (
         <div className='gamesBtn'>
       <button onClick={() => setSelectedGame('Hangman')}>Play Hangman</button>
@@ -24,11 +30,7 @@ function App() {
       {selectedGame === 'Wordle' && <Wordle />}
       {selectedGame === 'NumberGuesser' && <NumberGuesser />}
 
-      {selectedGame && (
-        <div>
-          <button className='backBtn' onClick={() => setSelectedGame(null)}>BACK</button>
-        </div>
-      )}
+      
 
     </div>
   )
