@@ -12,6 +12,24 @@
     margin-top: 80px;
 }
 
+.hangmanDrawing {
+    margin-bottom: 95px;
+}
+
+.wordDisplay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 140px;
+}
+
+.letter {
+    padding: 16px;
+    font-size: 50px;
+}
+
 .keyboard {
     display: flex;
     flex-direction: row;
@@ -52,21 +70,5 @@
     }
 }
 
-.word-display {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    margin-top: 140px;
-}
 
-.letter {
-    padding: 16px;
-    font-size: 50px;
-}
-
-.hangman-drawing {
-    margin-bottom: 95px;
-}
 

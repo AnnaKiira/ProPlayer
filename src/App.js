@@ -25,7 +25,9 @@ function App() {
       {selectedGame === 'NumberGuesser' && <NumberGuesser />}
 
       {selectedGame && (
-        <button onClick={() => setSelectedGame(null)}>Back to Games</button>
+        <div>
+          <button className='backBtn' onClick={() => setSelectedGame(null)}>BACK</button>
+        </div>
       )}
 
     </div>

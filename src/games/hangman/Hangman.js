@@ -56,11 +56,11 @@ function Hangman() {
 
             <div className='hangmanContainer'>
 
-                <div className='hangman-drawing'>
+                <div className='hangmanDrawing'>
                     <img src={hangmanImg[incorrectGuesses]} alt={`Hangman guess ${incorrectGuesses}`} />
                 </div>
 
-                <div className='word-display'>
+                <div className='wordDisplay'>
                     {randomWord.split('').map((letter, index,) => (
                         <span key={index} className='letter'>
                             {correctGuesses.includes(letter) ? letter : '_'}

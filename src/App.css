@@ -8,3 +8,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.backBtn {
+  display: flex;
+  background-color: #BF2A45;
+  border: 2px solid #791d2e;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 0 0 0 34px;
+}
