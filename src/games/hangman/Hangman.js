@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState, useCallback, useMemo } from 'react'
 import './Hangman.css'
 import hangman0 from './hangmanImg/hangman-0.svg'
 import hangman1 from './hangmanImg/hangman-1.svg'
@@ -10,11 +10,11 @@ import hangman6 from './hangmanImg/hangman-6.svg'
 
 const hangmanImg = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
 
-function Hangman() {
+function Hangman({registerResetHandler}) {
     const [correctGuesses, setCorrectGuesses] = useState([])
     const [incorrectGuesses, setIncorrectGuesses] = useState(0)
     const [selectedKeys, setSelectedKeys] = useState([])
-    const words = ['school', 'monkey', 'bottle', 'weather', 'flower']
+    const words = useMemo(() => ['school', 'monkey', 'bottle', 'weather', 'flower'], [])
     const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
     const maxGuesses = 6;
 
@@ -37,25 +37,23 @@ function Hangman() {
         }
     }
 
-    const startNewGame = () => {
+    const resetHangman = useCallback(() => {
         setRandomWord(words[Math.floor(Math.random() * words.length)])
         setCorrectGuesses([])
         setIncorrectGuesses(0)
         setSelectedKeys([])
-    }
+    }, [words])
+
+    useEffect(() => {
+        registerResetHandler(resetHangman)
+    }, [registerResetHandler, resetHangman])
 
 
     return (
         <div className='hangmanGame'>
 
-            <div className='actionBtn'>
-                <button className='resetGameBtn' onClick={startNewGame}>Restart Game</button>
-            </div>
-
-            
             <h1>HANGMAN</h1>
             
-
             <div className='hangmanContainer'>
 
                 <div className='hangmanDrawing'>

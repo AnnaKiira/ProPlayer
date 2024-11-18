@@ -5,7 +5,17 @@ import Wordle from './games/wordle/Wordle'
 import NumberGuesser from './games/number-guesser/NumberGuesser'
 
 function App() {
-  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedGame, setSelectedGame] = useState(null)
+  const [resetHandler, setResetHandler] = useState(null)
+
+  const registerResetHandler = (handler) => {
+    setResetHandler(() => handler) 
+  }
+
+
+  const startNewGame = () => {
+    if (resetHandler) resetHandler() 
+  }
 
   return (
     <div className='gamescontainer'>
@@ -15,6 +25,7 @@ function App() {
       {selectedGame && (
         <div className='actionBtn'>
           <button className='backBtn' onClick={() => setSelectedGame(null)}>Back</button>
+          <button className='resetGameBtn' onClick={startNewGame}>Restart Game</button>
         </div>
       )}
 
@@ -26,9 +37,9 @@ function App() {
       </div>
       )}
 
-      {selectedGame === 'Hangman' && <Hangman />}
-      {selectedGame === 'Wordle' && <Wordle />}
-      {selectedGame === 'NumberGuesser' && <NumberGuesser />}
+      {selectedGame === 'Hangman' && <Hangman registerResetHandler={registerResetHandler} />}
+      {selectedGame === 'Wordle' && <Wordle registerResetHandler={registerResetHandler} />}
+      {selectedGame === 'NumberGuesser' && <NumberGuesser registerResetHandler={registerResetHandler} />}
 
       
 
