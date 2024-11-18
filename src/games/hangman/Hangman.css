@@ -1,7 +1,7 @@
 .hangmanGame h1 {
     display: flex;
     justify-content: center;
-    font-size: 50px;
+    font-size: 65px;
     color: #F26BC3;
 }
 

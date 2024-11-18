@@ -2,23 +2,45 @@
   display: flex;
   justify-content: flex-end;
   font-size: 30px;
+  margin: 8px 24px 0 0;
 }
 
+/* div for all games buttons */
 .gamesBtn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* div for restart game and back button */
+.actionBtn { 
+  display: flex;
+}
+
 .backBtn {
   display: flex;
+  align-items: center;
   background-color: #BF2A45;
   border: 2px solid #791d2e;
   color: #FFFFFF;
-  padding: 15px 32px;
+  padding: 15px 30px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 50px;
-  margin: 0 0 0 34px;
+  margin: 0 0 0 24px;
+}
+
+.resetGameBtn {
+  display: flex;
+  align-items: center;
+  background-color: #7552F2;
+  border: 2px solid #5237b2;
+  color: #FFFFFF;
+  padding: 13px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 0 0 0 12px;
 }
