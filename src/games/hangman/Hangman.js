@@ -18,6 +18,7 @@ function Hangman({registerResetHandler}) {
     const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
     const maxGuesses = 6;
     const [gameOver, setGameOver] = useState(false)
+    const [isWinner, setIsWinner] = useState(false)
 
     const handleKeyClick = (keyvalue) => {
         if (selectedKeys.includes(keyvalue) || gameOver) return;
@@ -29,7 +30,14 @@ function Hangman({registerResetHandler}) {
 
     const guessCheck = (keyvalue) => {
         if (randomWord.includes(keyvalue)) {
-            setCorrectGuesses([...correctGuesses, keyvalue])
+            const updatedCorrectGuesses = [...correctGuesses, keyvalue]
+            setCorrectGuesses(updatedCorrectGuesses)
+
+            if (randomWord.split('').every((letter) => updatedCorrectGuesses.includes(letter))) {
+                setIsWinner(true)
+                setGameOver(true)
+            }
+
         } else {
             setIncorrectGuesses(incorrectGuesses + 1)
 
@@ -46,6 +54,7 @@ function Hangman({registerResetHandler}) {
         setIncorrectGuesses(0)
         setSelectedKeys([])
         setGameOver(false)
+        setIsWinner(false)
     }, [words])
 
     useEffect(() => {
@@ -74,10 +83,17 @@ function Hangman({registerResetHandler}) {
 
             </div>
 
-            {gameOver && (
+            {gameOver && !isWinner && (
                 <div className='gameOverMessage'>
                     <h2>Game Over!</h2>
                     <h3>Correct word was "{randomWord}"</h3>
+                </div>
+            )}
+
+            {isWinner && (
+                <div className='winnerMessage'>
+                    <h2>Congratulations!</h2>
+                    <h3>You guessed the correct word "{randomWord}"</h3>
                 </div>
             )}
 

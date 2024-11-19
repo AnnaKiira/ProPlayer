@@ -50,6 +50,26 @@
     color: #000000;
 }
 
+.winnerMessage {
+    margin: -90px 0 0 0;
+}
+
+.winnerMessage h2 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #378a11;
+}
+
+.winnerMessage h3 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
 .keyboard {
     display: flex;
     flex-direction: row;
