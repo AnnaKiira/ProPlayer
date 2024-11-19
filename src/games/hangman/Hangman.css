@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .hangmanDrawing {
@@ -30,13 +30,33 @@
     font-size: 50px;
 }
 
+.gameOverMessage {
+    margin: -90px 0 0 0;
+}
+
+.gameOverMessage h2{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+.gameOverMessage h3{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
 .keyboard {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0px 500px 0 500px;
+    margin: 0px 500px 90px 500px;
 }
 
 .key {

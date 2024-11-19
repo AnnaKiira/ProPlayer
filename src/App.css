@@ -8,8 +8,29 @@
 /* div for all games buttons */
 .gamesBtn {
   display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    gap: 20px;
+}
+
+.hangmanBtn {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.wordleBtn {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.numberGuesserBtn {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* div for restart game and back button */

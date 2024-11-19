@@ -17,8 +17,10 @@ function Hangman({registerResetHandler}) {
     const words = useMemo(() => ['school', 'monkey', 'bottle', 'weather', 'flower'], [])
     const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
     const maxGuesses = 6;
+    const [gameOver, setGameOver] = useState(false)
 
     const handleKeyClick = (keyvalue) => {
+        if (gameOver) return;
         if (!selectedKeys.includes(keyvalue)) {
             setSelectedKeys([...selectedKeys, keyvalue])
             guessCheck(keyvalue)
@@ -33,6 +35,7 @@ function Hangman({registerResetHandler}) {
 
             if (incorrectGuesses + 1 >= maxGuesses) {
                 console.log('Game over! The correct word was:', randomWord)
+                setGameOver(true)
             }
         }
     }
@@ -42,6 +45,7 @@ function Hangman({registerResetHandler}) {
         setCorrectGuesses([])
         setIncorrectGuesses(0)
         setSelectedKeys([])
+        setGameOver(false)
     }, [words])
 
     useEffect(() => {
@@ -69,6 +73,13 @@ function Hangman({registerResetHandler}) {
                 </div>
 
             </div>
+
+            {gameOver && (
+                <div className='gameOverMessage'>
+                    <h2>Game Over!</h2>
+                    <h3>Correct word was "{randomWord}"</h3>
+                </div>
+            )}
 
             <div className="keyboard">
                 {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (

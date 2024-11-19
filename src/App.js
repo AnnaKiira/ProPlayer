@@ -31,9 +31,9 @@ function App() {
 
       {!selectedGame && (
         <div className='gamesBtn'>
-      <button onClick={() => setSelectedGame('Hangman')}>Play Hangman</button>
-      <button onClick={() => setSelectedGame('Wordle')}>Play Wordle</button>
-      <button onClick={() => setSelectedGame('NumberGuesser')}>Play Number Guesser</button>
+      <button className='hangmanBtn' onClick={() => setSelectedGame('Hangman')}>Play Hangman</button>
+      <button className='wordleBtn' onClick={() => setSelectedGame('Wordle')}>Play Wordle</button>
+      <button className='numberGuesserBtn' onClick={() => setSelectedGame('NumberGuesser')}>Play Number Guesser</button>
       </div>
       )}
 
