@@ -74,6 +74,12 @@
     box-shadow: 5px 10px #6a89a7;
 }
 
+.key.disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
 .key:hover {
     animation: bubble 0.4s ease-out;
 }

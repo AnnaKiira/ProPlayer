@@ -20,7 +20,7 @@ function Hangman({registerResetHandler}) {
     const [gameOver, setGameOver] = useState(false)
 
     const handleKeyClick = (keyvalue) => {
-        if (gameOver) return;
+        if (selectedKeys.includes(keyvalue) || gameOver) return;
         if (!selectedKeys.includes(keyvalue)) {
             setSelectedKeys([...selectedKeys, keyvalue])
             guessCheck(keyvalue)
@@ -85,8 +85,9 @@ function Hangman({registerResetHandler}) {
                 {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
                     <div
                         key={keyvalue}
-                        className={`key ${selectedKeys.includes(keyvalue) ? 'selected' : ''}`}
+                        className={`key ${selectedKeys.includes(keyvalue) ? 'disabled' : ''}`}
                         onClick={() => handleKeyClick(keyvalue)}
+                        style={{ pointerEvents: selectedKeys.includes(keyvalue) ? 'none' : 'auto' }}
                     >
                         {keyvalue.toUpperCase()}
                     </div>
