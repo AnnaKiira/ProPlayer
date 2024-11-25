@@ -18,7 +18,7 @@ function Hangman({registerResetHandler}) {
     const [selectedKeys, setSelectedKeys] = useState([])
     const words = useMemo(() => ['school', 'monkey', 'bottle', 'weather', 'flower'], [])
     const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
-    const maxGuesses = 6;
+    const maxGuesses = 6
     const [gameOver, setGameOver] = useState(false)
     const [isWinner, setIsWinner] = useState(false)
 
