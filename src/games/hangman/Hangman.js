@@ -7,6 +7,8 @@ import hangman3 from './hangmanImg/hangman-3.svg'
 import hangman4 from './hangmanImg/hangman-4.svg'
 import hangman5 from './hangmanImg/hangman-5.svg'
 import hangman6 from './hangmanImg/hangman-6.svg'
+import winAudioFile from '../../audio/youWin.mp3'
+import loseAudioFile from '../../audio/youLose.mp3'
 
 const hangmanImg = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
 
@@ -36,6 +38,8 @@ function Hangman({registerResetHandler}) {
             if (randomWord.split('').every((letter) => updatedCorrectGuesses.includes(letter))) {
                 setIsWinner(true)
                 setGameOver(true)
+                const winAudio = new Audio(winAudioFile)
+                winAudio.play()
             }
 
         } else {
@@ -44,6 +48,8 @@ function Hangman({registerResetHandler}) {
             if (incorrectGuesses + 1 >= maxGuesses) {
                 console.log('Game over! The correct word was:', randomWord)
                 setGameOver(true)
+                const loseAudio = new Audio(loseAudioFile)
+                loseAudio.play()
             }
         }
     }
