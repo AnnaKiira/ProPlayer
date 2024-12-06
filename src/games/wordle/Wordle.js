@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState, useMemo, useCallback } from 'react'
 import './Wordle.css'
 
-function Wordle() {
+function Wordle({registerResetHandler}) {
     const [grid, setGrid] = useState(Array(6).fill('').map(() => Array(5).fill('')))
-    const [currentRow, /* setCurrenRow */] = useState(0)
+    const [currentRow, setCurrenRow] = useState(0)
     const [currentGuess, setCurrentGuess] = useState('')
-    /* const words = useMemo(() => ['shade', 'haunt', 'audio', 'plane', 'canoe', 'raise', 'dream', 'title', 'panic'], []) */
-    /* const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)]) */
-    const [gameOver, /* setGameOver */] = useState(false)
-    /* const [isWinner, setIsWinner] = useState(false) */
+    const words = useMemo(() => ['shade', 'haunt', 'audio', 'plane', 'canoe', 'raise', 'dream', 'title', 'panic'], [])
+    const [randomWord, setRandomWord] = useState(() => words[Math.floor(Math.random() * words.length)])
+    const [gameOver, setGameOver] = useState(false)
+    const [isWinner, setIsWinner] = useState(false)
 
 
     const handleKeyClick = (keyvalue) => {
@@ -23,6 +23,19 @@ function Wordle() {
             setGrid(updatedGrid)
         }
     }
+
+    const resetWordle = useCallback(() => {
+        setRandomWord(words[Math.floor(Math.random() * words.length)])
+        setGrid(Array(6).fill('').map(() => Array(5).fill('')))
+        setCurrenRow(0)
+        setCurrentGuess('')
+        setGameOver(false)
+        setIsWinner(false)
+    }, [words])
+
+    useEffect(() => {
+        registerResetHandler(resetWordle)
+    }, [registerResetHandler, resetWordle])
 
     return (
         <div className='wordleGame'>
