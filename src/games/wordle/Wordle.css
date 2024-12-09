@@ -4,20 +4,48 @@
     align-items: center;
     gap: 10px;
     margin: 20px auto;
-  }
+}
   
-  .row {
+.row {
     display: flex;
     gap: 10px;
-  }
+}
   
-  .cell {
+.cell {
     width: 40px;
     height: 40px;
     border: 2px solid #ccc;
     background-color: #f0f0f0;
-  }
+}
   
-  .cell.active {
+.cell.active {
     border-color: #007bff;
-  }
+    background-color: #e6f7ff;
+}
+
+.cell.green {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+
+.cell.yellow {
+    background-color: #c9b458;
+    border-color: #c9b458;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+
+.cell.grey {
+    background-color: #787c7e;
+    border-color: #787c7e;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
