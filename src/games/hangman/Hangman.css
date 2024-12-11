@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     color: red;
-    margin-bottom: -20px;
+    margin-bottom: -35px;
 }
 
 .gameOverMessage h3{
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: center;
     color: #378a11;
-    margin-bottom: -20px;
+    margin-bottom: -35px;
 }
 
 .winnerMessage h3 {
