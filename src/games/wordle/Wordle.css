@@ -49,3 +49,7 @@
     text-align: center;
     line-height: 40px;
 }
+
+.key.special {
+    width: 136px;
+}
