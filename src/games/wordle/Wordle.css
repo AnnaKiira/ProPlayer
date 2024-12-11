@@ -1,3 +1,9 @@
+.wordleGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .wordleGrid {
     display: flex;
     flex-direction: column;
@@ -7,10 +13,9 @@
 }
 
 .wordleGame h1 {
-    display: flex;
-    justify-content: center;
     font-size: 65px;
     color: #F26BC3;
+    margin: 0;
 }
   
 .row {
