@@ -187,4 +187,53 @@
     }
 }
 
+@media screen and (max-width:768px)  {
+    .hangmanContainer {
+        margin-top: 18px;
+    }
 
+    .hangmanGame {
+        justify-content: center;
+        margin-top: -18px;
+    }
+    
+    .hangmanGame h1 {
+        font-size: 32px;
+        margin-top: -42px;
+    }
+
+    .hangmanDrawing img {
+        width: 218px;
+        height: auto;
+    }
+
+    .wordDisplay {
+        margin-top: 75px;
+    }
+
+    .letter {
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .hangmanKeyboard {
+        margin: -20px 70px 0 70px;
+    }
+
+    .key {
+        padding: 18px;
+        margin: 5px;
+        font-size: 30px;
+        box-shadow: 5px 5px #6a89a7;
+    }
+    
+    .gameOverHangman h3{
+        font-size: 24px;
+        margin: 28px 0 18px 0;
+    }
+
+    .winnerHangman h3 {
+        font-size: 24px;
+        margin: 28px 0 18px 0;
+    }
+}
