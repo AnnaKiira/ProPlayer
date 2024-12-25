@@ -28,13 +28,15 @@
 .letter {
     padding: 16px;
     font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
-.gameOverMessage {
+.gameOverHangman {
     margin: -78px 0 0 0;
 }
 
-.gameOverMessage h2{
+.gameOverHangman h2{
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -43,7 +45,7 @@
     margin-bottom: -35px;
 }
 
-.gameOverMessage h3{
+.gameOverHangman h3{
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -51,11 +53,11 @@
     color: #000000;
 }
 
-.winnerMessage {
+.winnerHangman {
     margin: -78px 0 0 0;
 }
 
-.winnerMessage h2 {
+.winnerHangman h2 {
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -64,7 +66,7 @@
     margin-bottom: -35px;
 }
 
-.winnerMessage h3 {
+.winnerHangman h3 {
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -72,7 +74,7 @@
     color: #000000;
 }
 
-.keyboard {
+.hangmanKeyboard {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -118,5 +120,71 @@
     }
 }
 
+@media screen and (max-width:1445px)  {
+    .hangmanContainer {
+        margin-top: 32px;
+    }
+    
+    .hangmanGame h1 {
+        margin-top: -55px;
+        font-size: 48px;
+    }
+
+    .hangmanDrawing img {
+        width: 272px;
+        height: auto;
+    }
+
+    .wordDisplay {
+        margin-top: 125px;
+    }
+    
+    .letter {
+        padding: 12px;
+        font-size: 38px;
+    }
+
+    .hangmanKeyboard {
+        margin: -18px 370px 0 370px;
+    }
+
+    .key {
+        padding: 20px;
+        margin: 6px;
+        font-size: 30px;
+        font-weight: 500;
+        height: 12px;
+        width: 12px;
+        box-shadow: 5px 6px #6a89a7;
+    }
+
+    .gameOverHangman {
+        margin-top: -98px;
+    }
+    
+    .gameOverHangman h2{
+        font-size: 24px;
+        margin-bottom: -30px;
+    }
+    
+    .gameOverHangman h3{
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .winnerHangman {
+        margin-top: -98px;
+    }
+    
+    .winnerHangman h2 {
+        font-size: 24px;
+        margin-bottom: -30px;
+    }
+    
+    .winnerHangman h3 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+}
 
 

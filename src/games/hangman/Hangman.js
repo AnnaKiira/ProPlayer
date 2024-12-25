@@ -90,20 +90,20 @@ function Hangman({registerResetHandler}) {
             </div>
 
             {gameOver && !isWinner && (
-                <div className='gameOverMessage'>
+                <div className='gameOverHangman'>
                     <h2>Game Over!</h2>
                     <h3>Correct word was "{randomWord}"</h3>
                 </div>
             )}
 
             {isWinner && (
-                <div className='winnerMessage'>
+                <div className='winnerHangman'>
                     <h2>Congratulations!</h2>
                     <h3>You guessed the correct word "{randomWord}"</h3>
                 </div>
             )}
 
-            <div className="keyboard">
+            <div className="hangmanKeyboard">
                 {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
                     <div
                         key={keyvalue}

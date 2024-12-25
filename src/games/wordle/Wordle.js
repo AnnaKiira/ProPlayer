@@ -120,20 +120,20 @@ function Wordle({registerResetHandler}) {
             </div>
 
             {gameOver && !isWinner && (
-                <div className='gameOverMessage'>
+                <div className='gameOverWordle'>
                     <h2>Game Over!</h2>
                     <h3>Correct word was "{randomWord}"</h3>
                 </div>
             )}
 
             {gameOver && isWinner && (
-                <div className='winnerMessage'>
+                <div className='winnerWordle'>
                     <h2>Congratulations!</h2>
                     <h3>You guessed the correct word "{randomWord}"</h3>
                 </div>
             )}
 
-            <div className='keyboard'>
+            <div className='wordleKeyboard'>
 
                 {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm', 'DELETE', 'SUBMIT'].map((keyvalue) => (
                     <div
