@@ -226,7 +226,7 @@
         font-size: 30px;
         box-shadow: 5px 5px #6a89a7;
     }
-    
+
     .gameOverHangman h3{
         font-size: 24px;
         margin: 28px 0 18px 0;
@@ -235,5 +235,89 @@
     .winnerHangman h3 {
         font-size: 24px;
         margin: 28px 0 18px 0;
+    }
+}
+
+@media screen and (max-width:480px)  {
+    .resetGameBtn {
+        padding: 8px 8px 8px 8px;
+        font-size: 12px;
+    }
+
+    .backBtn {
+        padding: 8px 8px 8px 8px;
+        font-size: 12px;
+    }
+
+    .hangmanContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hangmanGame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hangmanGame h1 {
+        font-size: 34px;
+        margin: 28px 0 0 0;
+    }
+
+    .hangmanDrawing {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hangmanDrawing img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wordDisplay {
+        width: 100%;
+        margin-top: -158px;
+    }
+
+    .letter {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+    .hangmanKeyboard {
+        margin: 0px 5px 0 5px;
+    }
+
+    .key {
+        padding: 12px;
+        border-radius: 5px;
+        margin: 3px;
+        font-size: 16px;
+        box-shadow: 3px 3px #6a89a7;
+    }
+
+    .gameOverHangman {
+        margin-top: -68px;
+    }
+
+    .winnerHangman {
+        margin-top: -68px;
+    }
+
+    .gameOverHangman h2 {
+        font-size: 18px;
+    }
+
+    .winnerHangman h2 {
+        font-size: 18px;
+    }
+
+    .gameOverHangman h3{
+        font-size: 18px;
+    }
+
+    .winnerHangman h3 {
+        font-size: 18px;
     }
 }
