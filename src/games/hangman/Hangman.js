@@ -12,7 +12,7 @@ import loseAudioFile from '../../audio/youLose.mp3'
 
 const hangmanImg = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
 
-function Hangman({registerResetHandler}) {
+function Hangman({ registerResetHandler }) {
     const [correctGuesses, setCorrectGuesses] = useState([])
     const [incorrectGuesses, setIncorrectGuesses] = useState(0)
     const [selectedKeys, setSelectedKeys] = useState([])
@@ -69,51 +69,55 @@ function Hangman({registerResetHandler}) {
 
 
     return (
-        <div className='hangmanGame'>
+        <div className="container">
 
-            <h1>HANGMAN</h1>
-            
-            <div className='hangmanContainer'>
+            <div className='hangmanGame'>
 
-                <div className='hangmanDrawing'>
-                    <img src={hangmanImg[incorrectGuesses]} alt={`Hangman guess ${incorrectGuesses}`} />
+                <h1>HANGMAN</h1>
+
+                <div className='hangmanContainer'>
+
+                    <div className='hangmanDrawing'>
+                        <img src={hangmanImg[incorrectGuesses]} alt={`Hangman guess ${incorrectGuesses}`} />
+                    </div>
+
+                    <div className='wordDisplay'>
+                        {randomWord.split('').map((letter, index,) => (
+                            <span key={index} className='letter'>
+                                {correctGuesses.includes(letter) ? letter : '_'}
+                            </span>
+                        ))}
+                    </div>
+
                 </div>
 
-                <div className='wordDisplay'>
-                    {randomWord.split('').map((letter, index,) => (
-                        <span key={index} className='letter'>
-                            {correctGuesses.includes(letter) ? letter : '_'}
-                        </span>
+                {gameOver && !isWinner && (
+                    <div className='gameOverHangman'>
+                        <h2>Game Over!</h2>
+                        <h3>Correct word was "{randomWord}"</h3>
+                    </div>
+                )}
+
+                {isWinner && (
+                    <div className='winnerHangman'>
+                        <h2>Congratulations!</h2>
+                        <h3>You guessed the correct word "{randomWord}"</h3>
+                    </div>
+                )}
+
+                <div className="hangmanKeyboard">
+                    {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
+                        <div
+                            key={keyvalue}
+                            className={`key ${selectedKeys.includes(keyvalue) ? 'disabled' : ''}`}
+                            onClick={() => handleKeyClick(keyvalue)}
+                            style={{ pointerEvents: selectedKeys.includes(keyvalue) ? 'none' : 'auto' }}
+                        >
+                            {keyvalue.toUpperCase()}
+                        </div>
                     ))}
                 </div>
 
-            </div>
-
-            {gameOver && !isWinner && (
-                <div className='gameOverHangman'>
-                    <h2>Game Over!</h2>
-                    <h3>Correct word was "{randomWord}"</h3>
-                </div>
-            )}
-
-            {isWinner && (
-                <div className='winnerHangman'>
-                    <h2>Congratulations!</h2>
-                    <h3>You guessed the correct word "{randomWord}"</h3>
-                </div>
-            )}
-
-            <div className="hangmanKeyboard">
-                {['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'].map((keyvalue) => (
-                    <div
-                        key={keyvalue}
-                        className={`key ${selectedKeys.includes(keyvalue) ? 'disabled' : ''}`}
-                        onClick={() => handleKeyClick(keyvalue)}
-                        style={{ pointerEvents: selectedKeys.includes(keyvalue) ? 'none' : 'auto' }}
-                    >
-                        {keyvalue.toUpperCase()}
-                    </div>
-                ))}
             </div>
 
         </div>

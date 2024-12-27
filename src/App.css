@@ -1,54 +1,39 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .gamescontainer h1 {
   display: flex;
   justify-content: flex-end;
-  font-size: 30px;
   margin: 8px 24px 0 0;
+  font-size: 22px;
 }
 
-/* div for all games buttons */
 .gamesBtn {
   display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
-    gap: 20px;
+    gap: 12px;
 }
 
-.hangmanBtn {
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 50px;
-  color: #000000;
-  background-color: #4CBB17;
-  border: 2px solid #378a11;
-}
-
-.wordleBtn {
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 50px;
-  color: #000000;
-  background-color: #4CBB17;
-  border: 2px solid #378a11;
-}
-
+.hangmanBtn, 
+.wordleBtn,
 .numberGuesserBtn {
-  padding: 15px 30px;
-  font-size: 16px;
+  padding: 8px 8px 8px 8px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 50px;
   color: #000000;
   background-color: #4CBB17;
   border: 2px solid #378a11;
-}
+  }
 
-/* div for restart game and back button */
 .actionBtn { 
   display: flex;
 }
@@ -59,12 +44,12 @@
   background-color: #BF2A45;
   border: 2px solid #791d2e;
   color: #FFFFFF;
-  padding: 15px 30px;
-  font-size: 16px;
+  /* padding: 15px 30px; */
+  /* font-size: 16px; */
   font-weight: bold;
   cursor: pointer;
   border-radius: 50px;
-  margin: 0 0 0 24px;
+  /* margin: 0 0 0 24px; */
 }
 
 .resetGameBtn {
@@ -73,23 +58,126 @@
   background-color: #7552F2;
   border: 2px solid #5237b2;
   color: #FFFFFF;
-  padding: 13px 10px;
-  font-size: 16px;
+  /* padding: 13px 10px; */
+  /* font-size: 16px; */
   font-weight: bold;
   cursor: pointer;
   border-radius: 50px;
-  margin: 0 0 0 12px;
+  /* margin: 0 0 0 12px; */
 }
 
-@media screen and (max-width:768px) {
-  .actionBtn { 
-    display: flex;
-    margin-top: -30px;
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
   }
 
-  .backBtn {
-    padding: 12px 24px;
-    font-size: 16px;
-    margin: 0 0 0 8px;
+  .gamescontainer h1 {
+    font-size: 18px;
+  }
+
+  .gamesBtn {
+    gap: 12px;
+  }
+
+  .hangmanBtn, 
+  .wordleBtn,
+  .numberGuesserBtn {
+    font-size: 15px;
+  }
+}
+
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .gamescontainer h1 {
+    font-size: 24px;
+  }
+
+  .gamesBtn {
+    gap: 18px;
+  }
+
+  .hangmanBtn, 
+  .wordleBtn,
+  .numberGuesserBtn {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .gamescontainer h1 {
+    font-size: 28px;
+  }
+
+  .gamesBtn {
+    gap: 28px;
+  }
+
+  .hangmanBtn, 
+  .wordleBtn,
+  .numberGuesserBtn {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .gamescontainer h1 {
+    font-size: 30px;
+  }
+
+  .gamesBtn {
+    gap: 38px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .gamescontainer h1 {
+    font-size: 32px;
+  }
+
+  .gamesBtn {
+    gap: 48px;
+  }
+
+  .hangmanBtn, 
+  .wordleBtn,
+  .numberGuesserBtn {
+    padding: 12px 12px 12px 12px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+
+  .gamescontainer h1 {
+    font-size: 36px;
+  }
+
+  .gamesBtn {
+    gap: 68px;
+  }
+
+  .hangmanBtn, 
+  .wordleBtn,
+  .numberGuesserBtn {
+    font-size: 28px;
   }
 }
