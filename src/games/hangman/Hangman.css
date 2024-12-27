@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
   
-  .hangmanDrawing img {
+.hangmanDrawing img {
     max-width: 100%;
     height: auto;
 }
@@ -12,6 +14,7 @@
 .hangmanGame h1 {
     display: flex;
     justify-content: center;
+    align-items: center;
     /* font-size: 65px; */
     color: #F26BC3;
 }
@@ -40,7 +43,7 @@
     /* padding: 16px;
     font-size: 50px; */
     text-transform: uppercase;
-    /* font-weight: 600; */
+    font-weight: 600;
 }
 
 /* .gameOverHangman {
@@ -91,22 +94,25 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* margin: 0px 500px 90px 500px; */
+    max-width: 100%; 
+    margin: 0 auto; 
+    gap: 6px; 
 }
 
 .key {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 12px;
     cursor: pointer;
-    /* padding: 24px;
-    margin: 8px;
-    font-size: 50px;
-    height: 20px;
-    width: 20px; */
     background:#9BC1F2;
-    border-radius: 15px;
-    box-shadow: 5px 10px #6a89a7;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 3px 3px #6a89a7;
+    margin: 0;
+    height: 12px;
+    width: 12px;
 }
 
 .key.disabled {
@@ -131,7 +137,7 @@
     }
 }
 
-@media screen and (max-width:1445px)  {
+/* @media screen and (max-width:1445px)  {
     .hangmanContainer {
         margin-top: 32px;
     }
@@ -196,9 +202,9 @@
         font-size: 24px;
         margin-bottom: 18px;
     }
-}
+} */
 
-@media screen and (max-width:768px)  {
+/* @media screen and (max-width:768px)  {
     .hangmanContainer {
         margin-top: 18px;
     }
@@ -247,29 +253,18 @@
         font-size: 24px;
         margin: 28px 0 18px 0;
     }
-}
+} */
 
 @media screen and (max-width:475px)  {
-
-    .hangmanContainer {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .hangmanGame {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .hangmanGame h1 {
         font-size: 34px;
-        margin: 28px 0 0 0;
+        margin: 8px 0 0 0;
     }
 
     .hangmanDrawing {
         width: 100%;
         text-align: center;
+        margin-top: 30px;
     }
 
     .hangmanDrawing img {
@@ -279,47 +274,44 @@
 
     .wordDisplay {
         width: 100%;
-        margin-top: -158px;
+        margin: 217px 0 0 0;
     }
 
     .letter {
-        padding: 8px;
-        font-size: 28px;
+        padding: 6px;
+        font-size: 24px;
     }
 
     .hangmanKeyboard {
-        margin: 0px 5px 0 5px;
+        gap: 8px;
+        margin: 20px 15px 0 0px;
     }
 
     .key {
-        padding: 12px;
-        border-radius: 5px;
-        margin: 3px;
-        font-size: 16px;
-        box-shadow: 3px 3px #6a89a7;
+        font-size: 18px;
     }
 
     .gameOverHangman {
-        margin-top: -68px;
-    }
-
-    .winnerHangman {
-        margin-top: -68px;
+        margin-top: 8px;
     }
 
     .gameOverHangman h2 {
         font-size: 18px;
+        margin: 4px 4px;
     }
 
     .winnerHangman h2 {
         font-size: 18px;
+        margin: 4px 4px;
     }
 
     .gameOverHangman h3{
         font-size: 18px;
+        margin: 0;
     }
 
     .winnerHangman h3 {
         font-size: 18px;
+        margin: 0;
     }
 }

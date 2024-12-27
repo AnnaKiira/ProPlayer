@@ -37,35 +37,28 @@
 .actionBtn { 
   display: flex;
   gap: 10px;
-  margin-left: 10px;
+  margin: -18px 0px 0px 10px;
 }
 
-.backBtn {
-  display: flex;
-  align-items: center;
-  background-color: #BF2A45;
-  border: 2px solid #791d2e;
-  color: #FFFFFF;
-  /* padding: 15px 30px; */
-  /* font-size: 16px; */
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 50px;
-  /* margin: 0 0 0 24px; */
-}
-
+.backBtn,
 .resetGameBtn {
   display: flex;
   align-items: center;
-  background-color: #7552F2;
-  border: 2px solid #5237b2;
   color: #FFFFFF;
-  /* padding: 13px 10px; */
-  /* font-size: 16px; */
   font-weight: bold;
   cursor: pointer;
   border-radius: 50px;
-  /* margin: 0 0 0 12px; */
+  padding: 8px 8px 8px 8px;
+}
+
+.backBtn {
+  background-color: #BF2A45;
+  border: 2px solid #791d2e;
+}
+
+.resetGameBtn {
+  background-color: #7552F2;
+  border: 2px solid #5237b2;
 }
 
 @media (min-width: 475px) {
@@ -89,8 +82,7 @@
 
   .backBtn,
   .resetGameBtn {
-    padding: 8px 8px 8px 8px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
