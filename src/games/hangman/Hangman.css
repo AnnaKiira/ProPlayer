@@ -255,10 +255,14 @@
     }
 } */
 
-@media screen and (max-width:475px)  {
+@media (min-width:475px)  {
+    .hangmanGame {
+        margin-top: 20px;
+    }
+
     .hangmanGame h1 {
         font-size: 34px;
-        margin: 8px 0 0 0;
+        margin: 0px;
     }
 
     .hangmanDrawing {
@@ -284,15 +288,19 @@
 
     .hangmanKeyboard {
         gap: 8px;
-        margin: 20px 15px 0 0px;
+        margin: 28px 15px 0 0px;
     }
 
     .key {
-        font-size: 18px;
+        font-size: 24px;
+    }
+
+    .winnerHangman {
+        margin-top: 12px;
     }
 
     .gameOverHangman {
-        margin-top: 8px;
+        margin-top: 12px;
     }
 
     .gameOverHangman h2 {
@@ -323,9 +331,13 @@
 }
 
 @media (min-width: 768px) {
+    .hangmanGame {
+        margin-top: 0px;
+    }
+
     .hangmanGame h1 {
-        font-size: 34px;
-        margin: 8px 0 0 0;
+        font-size: 36px;
+        margin: 0px;
     }
 
     .hangmanDrawing {
@@ -356,10 +368,18 @@
     }
 
     .key {
-        font-size: 24px;
+        font-size: 28px;
         width: 15px;
         height: 15px;
         box-shadow: 4px 4px #6a89a7;
+    }
+
+    .winnerHangman {
+        margin-top: 0px;
+    }
+
+    .gameOverHangman {
+        margin-top: 0px;
     }
 
     .gameOverHangman h2 {
@@ -385,7 +405,7 @@
 
 @media (min-width: 1024px) {
     .hangmanGame h1 {
-        font-size: 38px;
+        font-size: 40px;
         margin-top: 0;
     }
 
@@ -397,54 +417,62 @@
         margin: 213px 0 0 0;
     }
 
+    .letter {
+        font-size: 30px;
+    }
+
     .hangmanKeyboard {
         margin: 10px 250px 0 250px;
     }
 
     .key {
-        font-size: 28px;
-        width: 18px;
-        height: 18px;
+        font-size: 30px;
+        width: 20px;
+        height: 20px;
         box-shadow: 5px 4px #6a89a7;
     }
 
     .gameOverHangman h2 {
-        font-size: 21px;
+        font-size: 22px;
         margin: 10px 0 2px 0;
     }
 
     .winnerHangman h2 {
-        font-size: 21px;
+        font-size: 22px;
         margin: 10px 0 2px 0;
     }
 
     .gameOverHangman h3{
-        font-size: 21px;
+        font-size: 22px;
     }
 
     .winnerHangman h3 {
-        font-size: 21px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 1280px) {
     .hangmanGame h1 {
-        font-size: 38px;
-        margin-top: -12px;
+        font-size: 42px;
+        margin: 0px;
     }
 
     .hangmanDrawing {
         margin-top: 20px;
     }
 
+    .hangmanDrawing img {
+        max-width: 375px;
+        height: auto;
+    }
+
     .wordDisplay {
         width: 100%;
-        margin: 228px 0 0 0;
+        margin: 272px 0 0 0;
     }
 
     .letter {
         padding: 5px;
-        font-size: 30px;
     }
 
     .hangmanKeyboard {
@@ -454,35 +482,29 @@
 
     .key {
         font-size: 32px;
-        width: 20px;
-        height: 20px;
         box-shadow: 5px 5px #6a89a7;
     }
 
     .gameOverHangman h2 {
-        font-size: 22px;
-        margin: 8px 0 0 0;
+        margin-top: 8px;
     }
 
     .winnerHangman h2 {
-        font-size: 22px;
-        margin: 8px 0 0 0;
+        margin-top: 8px;
     }
 
-    .gameOverHangman h3{
-        font-size: 20px;
+    /* .gameOverHangman h3{
         margin: 0;
-    }
+    } */
 
-    .winnerHangman h3 {
-        font-size: 20px;
+    /* .winnerHangman h3 {
         margin: 0;
-    }
+    } */
 }
 
 @media (min-width: 1536px) {
     .hangmanGame h1 {
-        font-size: 42px;
+        font-size: 58px;
         margin: 0;
     }
 
@@ -491,26 +513,27 @@
     }
 
     .hangmanDrawing img {
-        margin-right: 78px;
+        width: 368px;
+        height: auto;
     }
 
     .wordDisplay {
-        margin: 262px 0 0 0;
+        margin-top: 352px;
     }
 
     .letter {
-        padding: 5px;
-        font-size: 32px;
+        font-size: 35px;
     }
 
     .hangmanKeyboard {
-        margin: 32px 500px 0 500px;
+        margin: 32px 470px 0 470px;
+        gap: 12px; 
     }
 
     .key {
-        font-size: 32px;
-        width: 20px;
-        height: 20px;
+        font-size: 38px;
+        width: 22px;
+        height: 22px;
         box-shadow: 5px 5px #6a89a7;
     }
 
@@ -523,22 +546,22 @@
     }
 
     .gameOverHangman h2 {
-        font-size: 24px;
-        margin: 10px 0 0 0;
+        font-size: 28px;
+        margin-top: 10px;
     }
 
     .winnerHangman h2 {
-        font-size: 24px;
-        margin: 10px 0 0 0;
+        font-size: 28px;
+        margin-top: 10px;
     }
 
     .gameOverHangman h3{
-        font-size: 24px;
-        margin: 0;
+        font-size: 28px;
+        /* margin: 0; */
     }
 
     .winnerHangman h3 {
-        font-size: 24px;
-        margin: 0;
+        font-size: 28px;
+        /* margin: 0; */
     }
 }

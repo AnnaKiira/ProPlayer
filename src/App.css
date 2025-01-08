@@ -4,6 +4,7 @@
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  /* border: 1px solid red; */
 }
 
 .gamescontainer h1 {
@@ -199,10 +200,5 @@
   .wordleBtn,
   .numberGuesserBtn {
     font-size: 28px;
-  }
-
-  .backBtn,
-  .resetGameBtn {
-    font-size: 22px;
   }
 }
