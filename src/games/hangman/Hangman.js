@@ -84,7 +84,7 @@ function Hangman({ registerResetHandler }) {
                     <div className='wordDisplay'>
                         {randomWord.split('').map((letter, index,) => (
                             <span key={index} className='letter'>
-                                {correctGuesses.includes(letter) ? letter : '_'}
+                                {correctGuesses.includes(letter) ? letter : '__'}
                             </span>
                         ))}
                     </div>

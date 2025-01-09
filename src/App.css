@@ -1,10 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  /* border: 1px solid red; */
+  /* min-height: 100vh; */
+  border: 1px solid red;
 }
 
 .gamescontainer h1 {
@@ -62,7 +67,7 @@
   border: 2px solid #5237b2;
 }
 
-@media (min-width: 475px) {
+/* @media (min-width: 475px) {
   .container {
     max-width: 475px;
   }
@@ -85,10 +90,10 @@
   .resetGameBtn {
     font-size: 13px;
   }
-}
+} */
 
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .container {
     max-width: 640px;
   }
@@ -111,7 +116,7 @@
   .resetGameBtn {
     font-size: 14px;
   }
-}
+} */
 
 @media (min-width: 768px) {
   .container {
@@ -138,9 +143,9 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .container {
-    max-width: 1024px;
+    max-width: 1025px;
   }
 
   .gamescontainer h1 {
@@ -157,7 +162,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
@@ -181,9 +186,9 @@
   .resetGameBtn {
     font-size: 18px;
   }
-}
+} */
 
-@media (min-width: 1536px) {
+/* @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
   }
@@ -201,4 +206,4 @@
   .numberGuesserBtn {
     font-size: 28px;
   }
-}
+} */
